@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    background: url(background.png.png);
+    background-attachment: fixed;
+    background-blend-mode: hard-light;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(background.png.png);
+    background-position: center;
+    background-size: cover;
+    padding: 0 8%;
+    position: relative;
+    color: #fff;
+}
+
+.container h2 {
+    font-size: 64px;
+    font-weight: 600;
+}
+
+.container h2 span {
+    
+    color: #ff3753;
+}
+
+.countdown {
+    display: flex;
+    margin-top: 5rem;
+}
+
+.countdown div {
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    line-height: 10rem;
+    text-align: center;
+    background: #fff;
+    color: #333;
+    margin: 0 1.5rem;
+    font-size: 4.8em;
+    font-weight: 600;
+}
+
+.countdown div::before {
+    content: '';
+    position: absolute;
+    bottom: -3rem;
+    left: 0;
+    height: 3.5rem;
+    width: 100%;
+    background-color: #111727;
+    color: #cacaca;
+    font-size: 0.50em;
+    line-height: 3.5rem;
+    font-weight: 500;
+}
+
+.countdown #day::before {
+    content: 'Days';
+}
+
+.countdown #hour::before {
+    content: 'Hours';
+}
+
+.countdown #minute::before {
+    content: 'Minutes';
+}
+
+.countdown #second::before {
+    content: 'Seconds';
+}
+
+@media(max-width: 991px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media(max-width: 600px) {
+    .container h2 {
+        font-size: 13em;
+    }
+    .container h2 span {
+        font-size: 0.26em;
+    }
+    .countdown div {
+        width: 8rem;
+        font-size: 3.2em;
+        margin: 0;
+    }
+}
+
+.rocket{
+    width: 250px;
+    position: absolute;
+    right: 20%;
+    bottom: 0;
+    animation: rocket 4s linear infinite;
+
+}
+@keyframes rocket{
+    0%{
+        bottom: 0;
+        opacity: 0;
+    }
+
+    100%{
+        bottom: 105%;
+        opacity: 1;
+    }
+}
